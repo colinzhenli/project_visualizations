@@ -2,21 +2,15 @@ body {
     margin: 0 auto;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 18px;
-}
-
-.tbl_video {
-    /* border: 2px solid gray; */
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
+    text-align: center; /* Center aligns the text for the whole body */
 }
 
 .container {
     margin: 0 auto;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1200px; /* Adjust as needed */
     text-align: center;
-    display: block;
+    padding: 20px; /* Added padding for better spacing */
 }
 
 .title {
@@ -25,127 +19,34 @@ body {
     width: 90%;
 }
 
-.venue {
-    font-size: 22px;
-    margin-top: 20px;
-    width: 90%;
+/* Image Slider Styles */
+.image-slider {
+    width: 80%; /* Adjust the width as needed */
+    margin: 20px auto; /* Adds margin to the top and bottom */
+    overflow: hidden; /* Ensures the images don't overflow the container */
 }
 
-.author {
-    width: 95%;
-    max-width: 300px;
-    font-size: 20px;
+.image-slider img {
+    width: 100%; /* Adjust the width of images */
+    margin-bottom: 10px; /* Space between images */
 }
 
-.affiliation {
-    font-size: 20px;
-    width: 95%;
-    max-width: 450px;
-}
-
-.links {
-    font-size: 22px;
-    width: 95%;
-    max-width: 150px;
-}
-
-.video-container {
-    position: relative;
-    overflow: hidden;
-    width: 80%;
-    padding-top: 45%; /* Formula for 16:9 Aspect Ratio: width * 9 / 16 */
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.paper-thumbnail {
-    margin: 0 auto;
-    width: 40%;
-    max-width: 250px;
-    display: inline-block;
-    vertical-align: top;
-    padding: 2% 10% 4% 0;
-}
-
-.paper-info {
-    width: 45%;
-    display: inline-block;
-    vertical-align: top;
-}
-
-@media (max-width: 999px) {
-    .paper-thumbnail {
-        width: 60%;
-    }
-
-    .paper-info {
-        width: 80%;
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .image-slider {
+        width: 95%; /* Increase width on smaller screens */
     }
 }
 
+/* General Styles */
+h1, h2, h3, h4, h5 {
+    text-align: center; /* Center-aligns all headers */
+}
 
 p {
-    text-align: left;
+    text-align: center; /* Center-aligns paragraphs */
     margin: 0 auto;
     margin-bottom: 10px;
-}
-
-h1 {
-    font-weight: 300;
-    text-align: center;
-}
-
-h2 {
-    text-align: center;
-}
-
-h3 {
-    text-align: left;
-}
-
-h4 {
-    text-align: left;
-}
-
-h5 {
-    text-align: left;
-}
-
-div {
-    display: inline-block;
-}
-
-hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    width: 90%;
-}
-
-pre {
-    overflow-x: auto;
-    text-align: left;
-    border: 1px solid grey;
-    border-radius: 3px;
-    background: #eeeeee;
-    padding: 5px 5px 5px 10px;
-    line-height: 1.2;
-    white-space: pre-wrap;
-}
-
-pre code {
-    text-align: left;
-    word-wrap: normal;
-    white-space: pre-wrap;
-    font-size: 14px;
 }
 
 a:link, a:visited {
@@ -157,20 +58,10 @@ a:hover {
     color: #208799;
 }
 
-.layered-paper-big {
-    /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-    box-shadow:
-            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-            5px 5px 0 0px #fff, /* The second layer */
-            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-            10px 10px 0 0px #fff, /* The third layer */
-            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
-            15px 15px 0 0px #fff, /* The fourth layer */
-            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
-            20px 20px 0 0px #fff, /* The fifth layer */
-            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
-            25px 25px 0 0px #fff, /* The fifth layer */
-            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
-    margin-left: 10px;
-    margin-right: 45px;
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    width: 90%;
+    margin: 20px auto; /* Adds margin to the top and bottom */
 }

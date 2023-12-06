@@ -1,0 +1,22 @@
+{
+  "name": "project_visualizations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colinzhenli/project_visualizations.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colinzhenli/project_visualizations/issues"
+  },
+  "homepage": "https://github.com/colinzhenli/project_visualizations#readme",
+  "dependencies": {
+    "dics": "^2.6.1"
+  }
+}
