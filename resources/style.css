@@ -13,11 +13,64 @@ body {
     padding: 20px; /* Added padding for better spacing */
 }
 
+.main-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    text-align: center;
+    padding: 20px; /* Added padding for better spacing */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.sub-container {
+    width: 48%;/* width: 48%; Adjust the width as needed, this sets it to just under half the parent container's width */
+    display: flex;
+    flex-direction: column; /* Stack child elements side by side */
+}
+
 .title {
-    font-size: 36px;
+    font-size: 40px;
     margin-top: 20px;
     width: 90%;
 }
+
+.divider {
+    height: 2px; /* Height of the line */
+    background: #000; /* Color of the line */
+    width: 100%; /* Width relative to its container */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Centers the divider within its container */
+    display: block; /* Makes sure it is displayed as a block-level element */
+}
+
+.tldr{
+    font-size: 24px; /* Adjust font size as necessary */
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left; /* Aligns the subtitle to the right */
+    width: 100%; /* Ensures the div takes up the full width for proper alignment */
+}
+
+/* Additional CSS class for bold text */
+.bold {
+    font-weight: bold; /* Makes text bold */
+}
+
+.subtitle {
+    font-size: 24px; /* Adjust font size as necessary */
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.conclusions {
+    font-size: 20px; /* Adjust font size as necessary */
+    margin-top: 10px;
+    text-align: left; /* If you want to align the text to the left */
+    padding: 0 20px; /* Optional padding for better text spacing */
+}
+
 
 /* Image Slider Styles */
 .image-slider {

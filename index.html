@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Canonical Capsules: Self-Supervised Capsules in Canonical Pose</title>
+    <title>Stage 1: Reconstruction(from Latent Codes) Visualizations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./resources/style.css" media="screen"/>
@@ -15,26 +15,136 @@
 
 </head>
 <body>
+    <!-- Container for the first image group -->
     <div class="container">
         <div class="title">
-            Canonical Capsules: Self-Supervised Capsules in Canonical Pose
+            Stage 1: Reconstruction(from Latent Codes) Visualizations
         </div>
+        <br><br>
+        <br><br>
+        <div class="tldr">
+            <span class="bold">TL;DR:</span> We can reconstruct a promising mesh surface from voxel-level latents. The mesh is reconstructed using a marching cube algorithm, same as RangeUDF.
+        </div>
+        <br><br>
+        <div class="subtitle">
+            Visualization of the reconstruction results for voxel 0.02m.
+            The voxel centers are queried in the UDF decoder.
+        </div>
+        
+        <div class="b-dics" style="width: 100%;">
+            <img src="resources/images/Input_Voxel-0.02_30K.png" alt="Input 30K Points">
+            <img src="resources/images/Centers_Voxel-0.02_30K.png" alt="Voxel Centers">
+            <img src="resources/images/Mesh_Inter_Voxel-0.02_L1-0.20_num-30K.png" alt="Reconstruction CD:0.20">
+            <img src="resources/images/gt.png" alt="Ground Truth Pointcloud">
+        </div>
+    </div>
 
-        <!-- Image Slider -->
-        <div class="b-dics" style="width: 590px;">
-            <img src="resources/images/ball-inter_voxel-0.1_all_points.png" alt="Japan Yellow">
-            <img src="resources/images/gt_pointcloud.png" alt="Japan Yellow">
-            <img src="resources/images/snapshot05.png" alt="Japan Orange">
-            <img src="resources/images/voxel-0.5_voxel_centers.png" alt="Japan Black & White">
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Container for the second image group -->
+    <div class="container">
+        <div class="subtitle">
+            Ablation 1: Different Voxel Sizes
+        </div>
+        <div class="b-dics" style="width: 100%;">
+            <img src="resources/images/Centers_Voxel-0.02_30K.png" alt="Voxel Centers(voxel 0.02m)">
+            <img src="resources/images/Mesh_Inter_Voxel-0.02_L1-0.20_num-30K.png" alt="Reconstruction(0.02) CD:0.20">
+            <img src="resources/images/Centers_Voxel-0.1_30K.png" alt="Voxel Centers(voxel 0.1m)">
+            <img src="resources/images/Mesh_Inter_Voxel-0.1_L1-0.26_num-30K.png" alt="Reconstruction(0.1) CD:0.26">
+            <img src="resources/images/Centers_Voxel-0.5_30K.png" alt="Voxel Centers(voxel 0.5m)">
+            <img src="resources/images/Mesh_Inter_Voxel-0.5_L1-0.35_num-30K.png" alt="Reconstruction(0.5) CD:0.35">
+        </div>
+        <div class="conclusions">
+            The smaller voxel size has a larger latent space, which leads to more details in reconstruction.
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <div class="container">
+        <div class="subtitle">
+            Ablation 2: Different Input point number
+        </div>
+    </div>
+    <div class="main-container">
+
+        <!-- Left Container for the first two image groups -->
+        <div class="sub-container">
+            <!-- Container for the first image group -->
+            <div class="b-dics" style="width: 100%;">
+                <img src="resources/images/Mesh_Inter_Voxel-0.02_L1-0.16_num--1.png" alt="voxel 0.02m CD:0.16">
+                <img src="resources/images/Mesh_Inter_Voxel-0.1_L1-0.18_num--1.png" alt="voxel 0.1m CD:0.18">
+                <img src="resources/images/Mesh_Inter_Voxel-0.5_L1-0.30_num--1.png" alt="voxel 0.5m CD:0.30">
+            </div>
+        </div>
+    
+        <!-- Right Container for the last four image groups -->
+        <div class="sub-container">
+            <div class="b-dics" style="width: 100%;">
+                <img src="resources/images/Mesh_Inter_Voxel-0.5_L1-0.31_num-10K.png" alt="Voxel 0.5: 10K input">
+                <img src="resources/images/Mesh_Inter_Voxel-0.5_L1-0.35_num-30K.png" alt="Voxel 0.5: 30K input">
+            </div>
+        </div>
+    
+    </div>
+    <div class="container">
+        <div class="conclusions">
+            On the left, the reconstruction is generated using all points as input. <span style="color: red;"> This is the  actually case we used in downstream tasks.</span> There are many details for voxel 0.1m and 0.02m.
+            <br> On the right, the reconstructions are generated using 10K and 30K points as input. When using only 10K input points, there are some holes, but the reconstruction is still complete.
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <div class="container">
+        <div class="subtitle">
+            Ablation 3: Remove Interpolation part
+        </div>
+        <div class="b-dics" style="width: 100%;">
+            <img src="resources/images/Mesh_Inter_Voxel-0.5_L1-0.35_num-30K.png" alt="With Interpolation (Voxel 0.5m, CD:0.35)">
+            <img src="resources/images/Mesh_Voxel-0.5_L1-0.26_num-30K.png" alt="Remove Interpolation (Voxel 0.5m, CD:0.28)">
+            <img src="resources/images/gt.png" alt="Ground Truth Pointcloud">
+        </div>
+        <div class="conclusions">
+            Using interpolation, the reconstruction is smoother, especially at the boundaries of voxels.
+        </div>
+        <div class="conclusions">
+            <span style="color: red;">
+                There is an interesting observation: when using a large voxel size (0.5m), the reconstruction can fill in some large holes in the ground truth point cloud, such as the holes on the floor. This may affect the Chamfer Distance since the accuracy is worse after filling the holes.</span>
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <div class="container">
+        <div class="subtitle">
+            Ablation 4: Remove Interpolation part(details)
+        </div>
+        <div class="b-dics" style="width: 100%;">
+            <img src="resources/images/Inter_details.png" alt="With Interpolation (Voxel 0.5m, CD:0.35)">
+            <img src="resources/images/No-Inter_details.png" alt="Remove Interpolation (Voxel 0.5m, CD:0.28)">
+        </div>
+        <div class="conclusions">
+            Without interpolation, the reconstruction includes more small details. That's why the Chamfer Distance (CD) is smaller. However, those small objects are usually unlabeled in the ScanNet dataset. So, I "guess" that in the downstream tasks, the interpolated version is still better.
         </div>
     </div>
 
     <!-- Initialize Dics -->
     <script>
-        new Dics({
-        container: document.querySelector(".b-dics"),
-        textPosition: "top"
+        // Select all elements with the class 'b-dics' and loop through them
+        document.querySelectorAll(".b-dics").forEach(function(container) {
+            new Dics({
+                container: container,
+                textPosition: "top",
+                arrayColorText: ['#000000', '#000000', '#000000', '#000000', '#000000', '#000000'],
+                linesColor: 'rgb(173, 216, 230)'
+            });
         });
     </script>
+    
 </body>
 </html>
