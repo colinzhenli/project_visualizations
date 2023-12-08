@@ -140,6 +140,13 @@
             <img src="resources/images_2/Mesh_Voxel-0.5_num-30K.png" alt="Remove Interpolation (Voxel 0.5m, CD:0.25)">
             <img src="resources/images_2/gt_pointcloud.png" alt="Ground Truth Pointcloud">
         </div>
+        <div class="container">
+            <div class="b-dics" style="width: 100%;">
+                <img src="resources/images_2/Mesh_Voxel-0.02_Inter.png" alt="With Interpolation (Voxel 0.02m, CD:0.21)">
+                <img src="resources/images_2/Mesh_Voxel-0.02_No-Inter.png" alt="Remove Interpolation (Voxel 0.02m, CD:0.19)">
+                <img src="resources/images_2/gt_pointcloud.png" alt="Ground Truth Pointcloud">
+            </div>
+        </div>
         <div class="conclusions">
             Using interpolation, the reconstruction is smoother, especially at the boundaries of voxels.
         </div>
@@ -151,7 +158,6 @@
 
     <!-- Divider -->
     <div class="divider"></div>
-
     <div class="container">
         <div class="subtitle">
             Ablation 4: Remove Interpolation part(details)
@@ -160,6 +166,9 @@
             <img src="resources/images_2/Mesh_Inter_details.png" alt="With Interpolation (Voxel 0.5m, CD:0.25)">
             <img src="resources/images_2/Mesh_No-Inter_details.png" alt="Remove Interpolation (Voxel 0.5m, CD:0.25)">
         </div>
+    </div>
+    <div class="container">
+
         <div class="conclusions">
             Without interpolation, the reconstruction includes more small details. That's why the Chamfer Distance (CD) is similar However, those small objects are usually unlabeled in the ScanNet dataset. So, I "guess" that in the downstream tasks, the interpolated version is still better.
         </div>
