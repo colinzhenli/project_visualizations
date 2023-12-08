@@ -32,10 +32,42 @@
         </div>
         
         <div class="b-dics" style="width: 100%;">
-            <img src="resources/images/Input_Voxel-0.02_30K.png" alt="Input 30K Points">
-            <img src="resources/images/Centers_Voxel-0.02_30K.png" alt="Voxel Centers">
-            <img src="resources/images/Mesh_Inter_Voxel-0.02_L1-0.20_num-30K.png" alt="Reconstruction CD:0.20">
-            <img src="resources/images/gt.png" alt="Ground Truth Pointcloud">
+            <img src="resources/images_2/Input_Voxel-0.02_num-10K.png" alt="Input 10K Points">
+            <img src="resources/images_2/Mesh_Inter_Voxel-0.02_L1-0.21_num-10K.png" alt="Reconstruction CD:0.20 FS(0.5%): 97.42">
+            <img src="resources/images_2/Mesh_rangeudf_L1-0.21.png" alt="RangeUDF CD:0.21 FS(0.5%): 96.20">
+            <img src="resources/images_2/Mesh_gt.png" alt="Ground Truth Mesh">
+            <img src="resources/images_2/gt_pointcloud.png" alt="Ground Truth Pointcloud">
+        </div>
+
+    <div class="container">
+        <div class="subtitle">
+            Details Comparsion with Baseline RangeUDF
+        </div>
+    </div>
+
+    <div class="main-container">
+
+        <!-- Left Container for the first two image groups -->
+        <div class="sub-container">
+            <!-- Container for the first image group -->
+            <div class="b-dics" style="width: 100%;">
+                <img src="resources/images_2/Mesh_Voxel-0.02_details_1.png" alt="Ours Vovel 0.02m">
+                <img src="resources/images_2/Mesh_RangeUDF_details_1.png" alt="RangeUDF">
+            </div>
+        </div>
+    
+        <!-- Right Container for the last four image groups -->
+        <div class="sub-container">
+            <div class="b-dics" style="width: 100%;">
+                <img src="resources/images_2/Mesh_Voxel-0.02_details_2.png" alt="Ours Vovel 0.02m">
+                <img src="resources/images_2/Mesh_RangeUDF_details_2.png" alt="RangeUDF">
+            </div>
+        </div>
+    
+    </div>
+    <div class="container">
+        <div class="conclusions">
+            We have a slightly better reconstruction than RangeUDF in surface soomthness and completeness. And we use <span style="color: red;"> 4x</span> smaller latent space compared to RangeUDF.
         </div>
     </div>
 
@@ -48,12 +80,12 @@
             Ablation 1: Different Voxel Sizes
         </div>
         <div class="b-dics" style="width: 100%;">
-            <img src="resources/images/Centers_Voxel-0.02_30K.png" alt="Voxel Centers(voxel 0.02m)">
-            <img src="resources/images/Mesh_Inter_Voxel-0.02_L1-0.20_num-30K.png" alt="Reconstruction(0.02) CD:0.20">
-            <img src="resources/images/Centers_Voxel-0.1_30K.png" alt="Voxel Centers(voxel 0.1m)">
-            <img src="resources/images/Mesh_Inter_Voxel-0.1_L1-0.26_num-30K.png" alt="Reconstruction(0.1) CD:0.26">
-            <img src="resources/images/Centers_Voxel-0.5_30K.png" alt="Voxel Centers(voxel 0.5m)">
-            <img src="resources/images/Mesh_Inter_Voxel-0.5_L1-0.35_num-30K.png" alt="Reconstruction(0.5) CD:0.35">
+            <img src="resources/images_2/Centers_Voxel-0.02_num-10K.png" alt="Voxel Centers(voxel 0.02m)">
+            <img src="resources/images_2/Mesh_Inter_Voxel-0.02_num-30K.png" alt="Reconstruction(0.02) CD:0.17">
+            <img src="resources/images_2/Centers_Voxel-0.1_num-30K.png" alt="Voxel Centers(voxel 0.1m)">
+            <img src="resources/images_2/Mesh_Inter_Voxel-0.1_num-30K.png" alt="Reconstruction(0.1) CD:0.20">
+            <img src="resources/images_2/Centers_Voxel-0.5_num-30K.png" alt="Voxel Centers(voxel 0.5m)">
+            <img src="resources/images_2/Mesh_Inter_Voxel-0.5_num-30K.png" alt="Reconstruction(0.5) CD:0.25">
         </div>
         <div class="conclusions">
             The smaller voxel size has a larger latent space, which leads to more details in reconstruction.
@@ -74,17 +106,17 @@
         <div class="sub-container">
             <!-- Container for the first image group -->
             <div class="b-dics" style="width: 100%;">
-                <img src="resources/images/Mesh_Inter_Voxel-0.02_L1-0.16_num--1.png" alt="voxel 0.02m CD:0.16">
-                <img src="resources/images/Mesh_Inter_Voxel-0.1_L1-0.18_num--1.png" alt="voxel 0.1m CD:0.18">
-                <img src="resources/images/Mesh_Inter_Voxel-0.5_L1-0.30_num--1.png" alt="voxel 0.5m CD:0.30">
+                <img src="resources/images_2/Mesh_Inter_Voxel-0.02_num--1.png" alt="voxel 0.02m CD:0.16">
+                <img src="resources/images_2/Mesh_Inter_Voxel-0.1_num--1.png" alt="voxel 0.1m CD:0.17">
+                <img src="resources/images_2/Mesh_Inter_Voxel-0.5_num--1.png" alt="voxel 0.5m CD:0.24">
             </div>
         </div>
     
         <!-- Right Container for the last four image groups -->
         <div class="sub-container">
             <div class="b-dics" style="width: 100%;">
-                <img src="resources/images/Mesh_Inter_Voxel-0.5_L1-0.31_num-10K.png" alt="Voxel 0.5: 10K input">
-                <img src="resources/images/Mesh_Inter_Voxel-0.5_L1-0.35_num-30K.png" alt="Voxel 0.5: 30K input">
+                <img src="resources/images_2/Mesh_Inter_Voxel-0.5_num-10K.png" alt="Voxel 0.5: 10K input">
+                <img src="resources/images_2/Mesh_Inter_Voxel-0.5_num-30K.png" alt="Voxel 0.5: 30K input">
             </div>
         </div>
     
@@ -104,9 +136,9 @@
             Ablation 3: Remove Interpolation part
         </div>
         <div class="b-dics" style="width: 100%;">
-            <img src="resources/images/Mesh_Inter_Voxel-0.5_L1-0.35_num-30K.png" alt="With Interpolation (Voxel 0.5m, CD:0.35)">
-            <img src="resources/images/Mesh_Voxel-0.5_L1-0.26_num-30K.png" alt="Remove Interpolation (Voxel 0.5m, CD:0.28)">
-            <img src="resources/images/gt.png" alt="Ground Truth Pointcloud">
+            <img src="resources/images_2/Mesh_Inter_Voxel-0.5_num-30K.png" alt="With Interpolation (Voxel 0.5m, CD:0.25)">
+            <img src="resources/images_2/Mesh_Voxel-0.5_num-30K.png" alt="Remove Interpolation (Voxel 0.5m, CD:0.25)">
+            <img src="resources/images_2/gt_pointcloud.png" alt="Ground Truth Pointcloud">
         </div>
         <div class="conclusions">
             Using interpolation, the reconstruction is smoother, especially at the boundaries of voxels.
@@ -125,11 +157,11 @@
             Ablation 4: Remove Interpolation part(details)
         </div>
         <div class="b-dics" style="width: 100%;">
-            <img src="resources/images/Inter_details.png" alt="With Interpolation (Voxel 0.5m, CD:0.35)">
-            <img src="resources/images/No-Inter_details.png" alt="Remove Interpolation (Voxel 0.5m, CD:0.28)">
+            <img src="resources/images/Inter_details.png" alt="With Interpolation (Voxel 0.5m, CD:0.25)">
+            <img src="resources/images/No-Inter_details.png" alt="Remove Interpolation (Voxel 0.5m, CD:0.25)">
         </div>
         <div class="conclusions">
-            Without interpolation, the reconstruction includes more small details. That's why the Chamfer Distance (CD) is smaller. However, those small objects are usually unlabeled in the ScanNet dataset. So, I "guess" that in the downstream tasks, the interpolated version is still better.
+            Without interpolation, the reconstruction includes more small details. That's why the Chamfer Distance (CD) is similar However, those small objects are usually unlabeled in the ScanNet dataset. So, I "guess" that in the downstream tasks, the interpolated version is still better.
         </div>
     </div>
 
