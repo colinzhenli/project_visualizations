@@ -18,6 +18,71 @@
     <!-- Container for the first image group -->
     <div class="container">
         <div class="title">
+            Reconstruction Comparing with NKSR Baseline
+        </div>
+        <br><br>
+        <br><br>
+        <div class="tldr">
+            <span class="bold">TL;DR:</span> We achieve results on par with the NKSR baseline. We have the potential to be more robust against noisy inputs and to fill holes when using a multi-scale method, if we can benefit from large and small voxels.
+        </div>
+        <br><br>
+        <div class="subtitle">
+            Visualization comparsion of the reconstruction results for voxel 0.02m.
+        </div>
+        
+        <div class="b-dics" style="width: 100%;">
+            <img src="resources/nksr_baselines/Normal_NKSR_L1-0.17_Voxel_0.02.png" alt="NKSR (Normal Inputs) CD-0.17">
+            <img src="resources/nksr_baselines/No-normal_NKSR_L1-0.18_Voxel-0.02.png" alt="NKSR (No Normal Inputs): CD-0.18">
+            <img src="resources/nksr_baselines/Inter_Voxel-0.02_L1-0.21.png" alt="Ours: CD-0.21">
+        </div>
+    <div class="container">
+        <div class="conclusions">
+            With normal inputs, the NKSR baseline is cleaner, but it cannot fill any holes in the original input. Without normal inputs, the NKSR baseline exhibits holes in the bed, while our reconstruction is more complete. Since NKSR uses the dual marching cube algorithm from SDF, and we use a single marching cube from UDF, they have thinner surfaces.
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Container for the second image group -->
+    <div class="container">
+        <div class="subtitle">
+            Noisy Input: Input Points with Gaussian Noise (std=0.025m)
+        </div>
+        <div class="b-dics" style="width: 100%;">
+            <img src="resources/nksr_baselines/Noisy-0.025_Normal_NKSR_L1-0.24_Voxel-0.02.png" alt="NKSR with Normal: CD-0.24">
+            <img src="resources/nksr_baselines/Noisy-0.025_No-normal_NKSR_L1-0.26_Voxel-0.02.png" alt="NKSR without Normal: CD-0.26">
+            <img src="resources/nksr_baselines/Inter_Voxel-0.02_Noisy-0.025_L1-0.28.png" alt="Ours: CD-0.28">
+            <img src="resources/nksr_baselines/Inter_Voxel-0.5_Noisy-0.025_L1-0.30.png" alt="Ours(Voxel 0.5m): CD-0.30">
+        </div>
+        <div class="conclusions">
+            Since NKSR assumes that all inputs are zero-level sets when solving the kernel PDE, their surface is not flat with noisy inputs. However, with our method using a large voxel size (0.5m), the surface remains flat. <span style="color: red;"> This shows the potential for robustness in our approach if we carefully design a multi-scale method.</span>.
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <div class="container">
+        <div class="subtitle">
+            Large Voxels for NKSR Baseline
+        </div>
+    </div>
+    <div class="container">
+        <div class="b-dics" style="width: 100%;">
+            <img src="resources/nksr_baselines/NKSR_Voxel-0.5.png" alt="voxel 0.5m CD:1.12">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="conclusions">
+            While using the same feature dimension (64), NKSR cannot work with a large voxel size. However, the surface, though lacking any details, is complete and has no holes.
+        </div>
+    </div>
+
+    <!-- Container for the first image group -->
+    <div class="container">
+        <div class="title">
             Stage 1: Reconstruction(from Latent Codes) Visualizations
         </div>
         <br><br>
