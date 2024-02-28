@@ -40,6 +40,44 @@
             With normal inputs, the NKSR baseline is cleaner, but it cannot fill any holes in the original input. Without normal inputs, the NKSR baseline exhibits holes in the bed, while our reconstruction is more complete. Since NKSR uses the dual marching cube algorithm from SDF, and we use a single marching cube from UDF, they have thinner surfaces.
         </div>
     </div>
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Container for the second image group -->
+    <div class="container">
+        <div class="subtitle">
+            SDF Reconstruction Comparing with NKSR Baseline
+        </div>
+        <div class="b-dics" style="width: 100%;">
+            <img src="resources/attentions/Kernel-solver_growing00.png" alt="Kernel Solver with Growing(Baseline): CD-0.175">
+            <img src="resources/attentions/Trilinear_growing01.png" alt="Trilinear with growing: CD-0.167">
+            <img src="resources/attentions/Trilinear_no-growing02.png" alt="Trilinear no growing: CD-0.178">
+            <img src="resources/attentions/Attention_no-growing03.png" alt="Attention no growing: CD-0.186">
+            <img src="resources/attentions/ResNetAttention_no-growing04.png" alt="ResNetAttention no growing: CD-0.187">
+        </div>
+        <div class="conclusions">
+            <span style="color: red;"> To Do.</span>.
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Container for the second image group -->
+    <div class="container">
+        <div class="subtitle">
+            Noisy Input for SDF Reconstruction: Input Points with Gaussian Noise (std=0.025m)
+        </div>
+        <div class="b-dics" style="width: 100%;">
+            <img src="resources/attentions/Noisy_Kernel-solver_growing05.png" alt="Noisy Kernel Solver: CD-0.242">
+            <img src="resources/attentions/Noisy_Trilinear_no-growing07.png" alt="Noisy Trilinear: CD-0.248">
+            <img src="resources/attentions/Noisy_ResAttention_no-growing08.png" alt="Noisy ResAttention: CD-0.247">
+            <img src="resources/nksr_baselines/Inter_Voxel-0.5_Noisy-0.025_L1-0.30.png" alt="Ours(Voxel 0.5m): CD-0.30">
+        </div>
+        <div class="conclusions">
+            <span style="color: red;"> To Do.</span>.
+        </div>
+    </div>
 
     <!-- Divider -->
     <div class="divider"></div>
