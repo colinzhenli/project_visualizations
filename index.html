@@ -46,6 +46,41 @@
     <!-- Container for the second image group -->
     <div class="container">
         <div class="subtitle">
+            <span style="color: red;">Apr 30: Accuracy Error Analysis</span>
+        </div>
+        <div class="b-dics" style="width: 100%;">
+            <img src="resources/Accuracy_error_visualization/Our_DMC_Mesh_blue.png" alt="Our DMC Mesh">
+            <img src="resources/Accuracy_error_visualization/Our_Accuracy_errors_blue.png" alt="Our accuracy errors: 0.61">
+            <img src="resources/Accuracy_error_visualization/NKSR_DMC_Mesh_blue.png" alt="NKSR DMC Mesh(Trilinear Interpolation)">
+            <img src="resources/Accuracy_error_visualization/NKSR_accuracy_errors_blue.png" alt="NKSR accuracy errors: 0.21">
+        </div>
+        <div class="Conclusions">
+            <span style="color: red;">Notes:</span>The per-point accuracy error visualizations. The points are sampled from the reconstructed mesh for evaluation. The accuracy errors are the distances of the points with respect to the nearest points in the ground truth mesh. <span style="color: red;">Red colors indicate higher errors.</span>, <span style="color: blue;">Blue colors indicate lower errors.</span>.
+        </div>
+
+        <div class="Conclusions">
+            <span style="color: red;">Analysis:</span> The accuracy error of our reconstruction comes from two parts. First, the stretched surface boundary. Second, the filled-in holes.
+        </div>
+    </div>
+
+    <!-- Container for the second image group -->
+    <div class="container">
+        <div class="subtitle">
+            <span style="color: red;">Apr 30: Accuracy Error Analysis (Locally)</span>
+        </div>
+        <div class="b-dics" style="width: 100%;">
+            <img src="resources/Accuracy_error_visualization/Our_DMC_Mesh_local_blue.png" alt="Our DMC Mesh(Filling holes)">
+            <img src="resources/Accuracy_error_visualization/Our_Accuracy_errors_local_blue.png" alt="Our accuracy erros">
+            <img src="resources/Accuracy_error_visualization/NKSR_Mesh_local_blue.png" alt="NKSR DMC Mesh(Keeping holes)">
+        </div>
+        <div class="Conclusions">
+            <span style="color: red;">Analysis:</span> Our reconstruction fills in holes, which causes points not to appear in the ground truth meshes, therefore significantly increasing the accuracy errors.
+        </div>
+    </div>
+
+    <!-- Container for the second image group -->
+    <div class="container">
+        <div class="subtitle">
             SDF Reconstruction Comparing with NKSR Baseline
         </div>
         <div class="b-dics" style="width: 100%;">
