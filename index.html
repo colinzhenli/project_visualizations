@@ -46,6 +46,28 @@
     <!-- Container for the second image group -->
     <div class="container">
         <div class="subtitle">
+            <span style="color: red;">May 5: Eikonal Loss Improvement</span>
+        </div>
+        <div class="b-dics" style="width: 100%;">
+            <img src="resources/Eikonal_loss/No-Eikonal_loss_whole.png" alt="Ours(No Eikonal loss)">
+            <img src="resources/Eikonal_loss/Eikonal_loss_whole.png" alt="Ours(Eikonal loss weight 0.02)">
+            <img src="resources/Eikonal_loss/NKSR_whole.png" alt="NKSR DMC Mesh(Trilinear Interpolation)">
+        </div>
+    </div>
+    <!-- Container for the second image group -->
+    <div class="container">
+        <div class="b-dics" style="width: 100%;">
+            <img src="resources/Eikonal_loss/No-Eikonal-loss_wall.png" alt="Ours(No Eikonal loss)">
+            <img src="resources/Eikonal_loss/Eikonal-loss_wall.png" alt="Ours(Eikonal loss weight 0.02)">
+            <img src="resources/Eikonal_loss/NKSR_wall.png" alt="NKSR DMC Mesh(Trilinear Interpolation)">
+        </div>
+        <div class="Conclusions">
+            With the Eikonal Loss (SDF Regularizer), we achieve a much smoother surface; it's as smooth as the NKSR baseline. Therefore, we don't need ground truth normals as supervision. Also, the loss weights (0.02, 0.1, or 0.5) don't affect the results much.
+        </div>
+    </div>
+    <!-- Container for the second image group -->
+    <div class="container">
+        <div class="subtitle">
             <span style="color: red;">Apr 30: Accuracy Error Analysis</span>
         </div>
         <div class="b-dics" style="width: 100%;">
@@ -55,7 +77,7 @@
             <img src="resources/Accuracy_error_visualization/NKSR_accuracy_errors_blue.png" alt="NKSR accuracy errors: 0.21">
         </div>
         <div class="Conclusions">
-            <span style="color: red;">Notes:</span>The per-point accuracy error visualizations. The points are sampled from the reconstructed mesh for evaluation. The accuracy errors are the distances of the points with respect to the nearest points in the ground truth mesh. <span style="color: red;">Red colors indicate higher errors.</span>, <span style="color: blue;">Blue colors indicate lower errors.</span>.
+            <span style="color: red;">Notes:</span>The per-point accuracy error visualizations. The points are sampled from the reconstructed mesh forz evaluation. The accuracy errors are the distances of the points with respect to the nearest points in the ground truth mesh. <span style="color: red;">Red colors indicate higher errors.</span>, <span style="color: blue;">Blue colors indicate lower errors.</span>.
         </div>
 
         <div class="Conclusions">
