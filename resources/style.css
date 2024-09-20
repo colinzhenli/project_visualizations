@@ -11,6 +11,7 @@ body {
     max-width: 1200px; /* Adjust as needed */
     text-align: center;
     padding: 20px; /* Added padding for better spacing */
+    
 }
 
 .main-container {
@@ -35,6 +36,7 @@ body {
     margin-top: 20px;
     width: 90%;
 }
+
 
 .divider {
     height: 2px; /* Height of the line */
